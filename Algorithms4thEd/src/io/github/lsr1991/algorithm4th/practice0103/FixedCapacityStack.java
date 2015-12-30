@@ -3,13 +3,13 @@ package io.github.lsr1991.algorithm4th.practice0103;
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
-public class FixedCapacityStackOfStrings {
+public class FixedCapacityStack<Item> {
 
-	private String[] a;
+	private Item[] a;
 	private int N;
 	
-	public FixedCapacityStackOfStrings(int cap) {
-		a = new String[cap];
+	public FixedCapacityStack(int cap) {
+		a = (Item[])new Object[cap];
 	}
 	
 	public int size() {
@@ -20,16 +20,16 @@ public class FixedCapacityStackOfStrings {
 		return N == 0;
 	}
 	
-	public void push(String item) {
+	public void push(Item item) {
 		a[N++] = item;
 	}
 	
-	public String pop() {
+	public Item pop() {
 		return a[--N];
 	}
 	
 	public static void main(String[] args) {
-		FixedCapacityStackOfStrings s = new FixedCapacityStackOfStrings(100);
+		FixedCapacityStack<String> s = new FixedCapacityStack<String>(100);
 		while (!StdIn.isEmpty()) {
 			String item = StdIn.readString();
 			if (!item.equals("-")) {
@@ -39,6 +39,7 @@ public class FixedCapacityStackOfStrings {
 			}
 		}
 		StdOut.println("(" + s.size() + " left on stack)");
+
 	}
 
 }
