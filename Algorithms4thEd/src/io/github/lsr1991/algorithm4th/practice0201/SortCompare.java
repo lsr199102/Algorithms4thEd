@@ -1,5 +1,7 @@
 package io.github.lsr1991.algorithm4th.practice0201;
 
+import edu.princeton.cs.algs4.Merge;
+import edu.princeton.cs.algs4.MergeBU;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
@@ -16,6 +18,10 @@ public class SortCompare {
 			Shell.sort(a);
 		} else if (alg.equals("MyShell")) {
 			Shell.mySort(a);
+		} else if (alg.equals("Merge")) {
+			Merge.sort(a);
+		} else if (alg.equals("MergeBU")) {
+			MergeBU.sort(a);
 		}
 		return t.elapsedTime();
 	}
