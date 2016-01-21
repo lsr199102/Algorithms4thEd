@@ -7,7 +7,7 @@ public class MergeBU {
 
 	private static Comparable[] aux;
 	
-	private static void sort(Comparable[] a) {
+	public static void sort(Comparable[] a) {
 		int N = a.length;
 		aux = new Comparable[N];
 		for (int size = 1; size < N; size += size) {
