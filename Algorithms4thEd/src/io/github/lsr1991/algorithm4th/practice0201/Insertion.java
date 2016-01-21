@@ -5,8 +5,8 @@ import edu.princeton.cs.algs4.StdOut;
 
 public class Insertion {
 
-	public static void sort(Comparable[] a) {
-		for (int i = 1; i < a.length; i ++) {
+	public static void sort(Comparable[] a, int lo, int hi) {
+		for (int i = lo + 1; i < hi + 1; i ++) {
 			for (int j = i; j > 0; j --) {
 				if (less(a[j], a[j-1])) {
 					exch(a, j, j-1);
@@ -15,6 +15,10 @@ public class Insertion {
 				}
 			}
 		}
+	}
+	
+	public static void sort(Comparable[] a) {
+		sort(a, 0, a.length - 1);
 	}
 	
 	private static boolean less(Comparable v, Comparable w) {
