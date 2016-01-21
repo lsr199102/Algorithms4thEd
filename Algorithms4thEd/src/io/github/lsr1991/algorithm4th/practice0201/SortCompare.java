@@ -1,7 +1,9 @@
 package io.github.lsr1991.algorithm4th.practice0201;
 
-import edu.princeton.cs.algs4.Merge;
-import edu.princeton.cs.algs4.MergeBU;
+import io.github.lsr1991.algorithm4th.practice0202.Merge;
+import io.github.lsr1991.algorithm4th.practice0202.MergeBU;
+import io.github.lsr1991.algorithm4th.practice0203.InsertQuick;
+import io.github.lsr1991.algorithm4th.practice0203.Quick;
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 import edu.princeton.cs.algs4.Stopwatch;
@@ -22,6 +24,10 @@ public class SortCompare {
 			Merge.sort(a);
 		} else if (alg.equals("MergeBU")) {
 			MergeBU.sort(a);
+		} else if (alg.equals("Quick")) {
+			Quick.sort(a);
+		} else if (alg.equals("InsertQuick")) {
+			InsertQuick.sort(a);
 		}
 		return t.elapsedTime();
 	}
