@@ -17,7 +17,6 @@ public class Drawer {
 	private static final double LOG10_2 = Math.log10(2); 
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int N = 100;
 //		StdDraw.setXscale(0, 3);
 //		StdDraw.setYscale(0, 3);
